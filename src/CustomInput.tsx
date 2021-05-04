@@ -5,13 +5,15 @@ import {orangeColor} from '../App';
 type CustomInputProps = {
     label: string;
     placeholder: string;
-    isShowBelowTitle?: boolean;
+    isShowBelowTitle?: boolean;    
+    belowTitle: string;
 };
 
 const CustomInput: React.FC<CustomInputProps> = ({
     label,
     placeholder,
     isShowBelowTitle,
+    belowTitle
 }) => {
     return (
         <View style={{marginVertical: 5}}>
@@ -34,7 +36,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
                         color: orangeColor,
                         textDecorationLine: 'underline',
                     }}>
-                    Register with phone number
+                    {belowTitle}
                 </Text>
             )}
         </View>

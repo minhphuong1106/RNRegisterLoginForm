@@ -29,19 +29,23 @@ const App = () => {
     {
       title: 'Name',
       placeholder: 'John Doe',
+      belowTitle: ''
     },
     {
       title: 'Mail',
       placeholder: 'adb@gmail.com',
-      isShowBelowTitle: true
+      isShowBelowTitle: true,
+      belowTitle: 'Register with phone number'
     },
     {
       title: 'Password',
-      placeholder: '*****'
+      placeholder: '*****',
+      belowTitle: ''
     },
     {
       title: 'RetypePassword',
-      placeholder: '*****'
+      placeholder: '*****',
+      belowTitle: ''
     }
   ];
   const signUp = (label: string) => {
@@ -66,7 +70,7 @@ const App = () => {
         <View style={{ margin: 20 }}>
           {
             InputList.map((input, index) => (
-              <CustomInput key={index} label={input.title} placeholder={input.placeholder} isShowBelowTitle={input.isShowBelowTitle} />
+              <CustomInput key={index} label={input.title} placeholder={input.placeholder} isShowBelowTitle={input.isShowBelowTitle} belowTitle={input.belowTitle} />
             ))
           }
           <CustomButton label={'SignUp'} colorCode={orangeColor} onPress={signUp}/>
